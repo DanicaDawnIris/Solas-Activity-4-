@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <title> Activity 4 </title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1> Profit Prediction </h1>
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="spending" placeholder="R&D Spend" required="required" /><br><br>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict profit</button>
+    </form>
+
+   <br>
+   <h4> {{ prediction_output }} </h4>
+
+</body>
+</html>
